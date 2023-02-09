@@ -7,8 +7,8 @@ export const shuffleWord = (maxWord: number, language: string) => {
 
   let shuffledWord;
   switch (language) {
-    case "k8s":
-      shuffledWord = k8s.slice(0);
+    case "easy_en":
+      shuffledWord = easy_en.slice(0);
       break;
     case "py":
       shuffledWord = py.slice(0);
@@ -17,7 +17,7 @@ export const shuffleWord = (maxWord: number, language: string) => {
       shuffledWord = linux.slice(0);
       break;
     default:
-      shuffledWord = easy_en.slice(0);
+      shuffledWord = k8s.slice(0);
       break;
   }
   for (let i = shuffledWord.length - 1; i > 0; i--) {

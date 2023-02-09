@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 const IndexPage = () => {
   const [words, setWords] = useState<string[]>([""]);
   const [wordInput, setWordInput] = useState<string>("");
-  const [language, setLanguage] = useState<string>("easy_en");
+  const [language, setLanguage] = useState<string>("k8s");
   const [isInputCorrect, setIsInputCorrect] = useState<boolean>(true);
   const [correctKeystroke, setCorrectKeystroke] = useState<number>(0);
   const [wrongKeystroke, setWrongKeystroke] = useState<number>(0);
@@ -102,7 +102,14 @@ const IndexPage = () => {
           setWrongWords((prev) => prev + 1);
         }
 
-        setWords((prevWords) => prevWords.slice(1));
+        const remainingWords = words.slice(1);
+        if (remainingWords.length === 0) {
+          // create a new line of random words here
+          const newLine = shuffleWord(10, language);
+          setWords(newLine);
+        } else {
+          setWords(remainingWords);
+        }
       }
     }
   };

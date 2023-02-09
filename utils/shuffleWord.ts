@@ -1,20 +1,20 @@
 import easy_en from "./easy_en.json";
-import en from "./en.json";
-import es from "./es.json";
-import fr from "./fr.json";
+import k8s from "./k8s.json";
+import py from "./py.json";
+import linux from "./linux.json";
 
 export const shuffleWord = (maxWord: number, language: string) => {
 
   let shuffledWord;
   switch (language) {
-    case "en":
-      shuffledWord = en.slice(0);
+    case "k8s":
+      shuffledWord = k8s.slice(0);
       break;
-    case "es":
-      shuffledWord = es.slice(0);
+    case "py":
+      shuffledWord = py.slice(0);
       break;
-    case "fr":
-      shuffledWord = fr.slice(0);
+    case "linux":
+      shuffledWord = linux.slice(0);
       break;
     default:
       shuffledWord = easy_en.slice(0);

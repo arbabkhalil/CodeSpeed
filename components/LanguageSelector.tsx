@@ -16,9 +16,9 @@ const LanguageSelector: React.FC<Props> = (props) => (
       className="w-full rounded appearance-none bg-white border-2 border-indigo-300 py-2 focus:outline-none focus:border-indigo-500 text-base pl-3 pr-7"
     >
       <option value="easy_en">English</option>
-      <option value="en">English (hard)</option>
-      <option value="es">Español (hard)</option>
-      <option value="fr">Français (hard)</option>
+      <option value="k8s">Kubernetes</option>
+      <option value="py">Python</option>
+      <option value="linux">Linux</option>
     </select>
   </div>
 );

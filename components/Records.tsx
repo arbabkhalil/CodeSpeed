@@ -11,14 +11,14 @@ type Props = {
 const Records: React.FC<Props> = (props) => {
   let lang;
   switch (props.language) {
-    case "en":
-      lang = "hard english";
+    case "k8s":
+      lang = "kubernetes";
       break;
-    case "es":
-      lang = "hard spanish";
+    case "py":
+      lang = "python";
       break;
-    case "fr":
-      lang = "hard french";
+    case "linux":
+      lang = "linux";
       break;
     default:
       lang = "english";
